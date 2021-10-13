@@ -38,6 +38,7 @@ def index():
         <div>
             <h1>Welcome!</h1><br>
             <p>This site was released according to a test related with xmen and MELI.</p>
+            <p>V2</p>
         </div>
     """
 
