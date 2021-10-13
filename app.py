@@ -1,11 +1,16 @@
 from flask import Flask, render_template
 
-app = Flask(__name__)
 
+app = Flask(__name__)
 @app.route("/")
 def index():
-    # Render HTML with count variable
-    return render_template("index.html")
+    return """
+        <div>
+            <h1>Welcome!</h1><br>
+            <p>This site was released according to a test.</p>
+        </div>
+    """
+
 
 if __name__ == "__main__":
     app.run()
