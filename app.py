@@ -1,6 +1,6 @@
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
-
+from src.main import main as main_blueprint
 
 
 app = Flask(__name__)
@@ -13,14 +13,16 @@ db.init_app(app)
 # db.drop_all()
 # db.create_all()
 
-@app.route("/")
-def index():
-    return """
-        <div>
-            <h1>Welcome!</h1><br>
-            <p>This site was released according to a test related with xmen and MELI.</p>
-        </div>
-    """
+# @app.route("/")
+# def index():
+#     return """
+#         <div>
+#             <h1>Welcome!</h1><br>
+#             <p>This site was released according to a test related with xmen and MELI.</p>
+#         </div>
+#     """
+
+app.register_blueprint(main_blueprint)
 
 if __name__ == "__main__":
     app.run()
